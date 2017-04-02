@@ -40,7 +40,7 @@ export class HandComponent implements OnInit {
     handIconClassNames.forEach(element => {
       handIcon_classList.remove(element);
     });
-    
+
     switch(hand) {
       case Hand.Rock:
         handIcon_classList.add("fa-hand-rock-o");

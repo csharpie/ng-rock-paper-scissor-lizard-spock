@@ -14,13 +14,17 @@ import { BotHandService } from './shared/services/bot-hand.service';
 import { RankService } from './shared/services/rank.service';
 
 import { RadioButtonModule } from 'primeng/primeng';
+import { HeaderComponent } from './shared/layouts/header/header.component';
+import { FooterComponent } from './shared/layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    HandComponent
+    HandComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
