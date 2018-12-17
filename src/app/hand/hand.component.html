@@ -1,37 +1,33 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-5">
             <h2 class="text-left">You</h2>
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
         </div>
-        <div class="col-md-5">
+        <div class="col-5">
             <h2 class="text-right">Mr. Roboto</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5 text-left">
-            <i id="handIcon" class="fa handIcon flipHorizontal "></i>
+        <div class="col-5 text-left">
+            <i id="handIcon" class="fa handIcon fa-flip-horizontal"></i>
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
             <i id="handShakeIcon" class="fa fa-handshake-o handIcon text-center"></i>
         </div>
-        <div class="col-md-5  text-right">
+        <div class="col-5  text-right">
             <i id="botHandIcon" class="fa handIcon"></i>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5">
-            <p-radioButton name="hand" value="0" label="Rock" *ngIf="show" [(ngModel)]="selectedValue" (click)="onclick($event)"></p-radioButton>
-            <p-radioButton name="hand" value="1" label="Paper" *ngIf="show" [(ngModel)]="selectedValue" (click)="onclick($event)"></p-radioButton>
-            <p-radioButton name="hand" value="2" label="Scissor" *ngIf="show" [(ngModel)]="selectedValue" (click)="onclick($event)"></p-radioButton>
-            <p-radioButton name="hand" value="3" label="Lizard" *ngIf="show" [(ngModel)]="selectedValue" (click)="onclick($event)"></p-radioButton>
-            <p-radioButton name="hand" value="4" label="Spock" *ngIf="show" [(ngModel)]="selectedValue" (click)="onclick($event)"></p-radioButton> 
+        <div class="col-5">
+            <p-dropdown [options]="handChoices" [(ngModel)]="selectedValue" (onChange)="onChange($event)" optionLabel="choice" placeholder="Select a Hand"></p-dropdown>
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
             <h1 *ngIf="winnerStatus">{{winnerStatus}}</h1>
         </div>
-        <div class="col-md-5">
+        <div class="col-5">
             
         </div>
     </div>

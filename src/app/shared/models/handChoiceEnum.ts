@@ -1,4 +1,4 @@
-export enum Hand {
+export enum HandChoiceEnum {
     Rock,
     Paper,
     Scissors,

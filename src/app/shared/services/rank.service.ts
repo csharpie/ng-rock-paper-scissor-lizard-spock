@@ -1,65 +1,62 @@
 import { Injectable } from '@angular/core';
 
-import { Hand } from '../../shared/models/hand';
+import { HandChoiceEnum } from '../models/handChoiceEnum';
 
 @Injectable()
 export class RankService {
 
-  getWinner(playerHand: number, botHand: number) {
-    if (playerHand === botHand) {
+  getWinner(playerHandChoiceId: number, botHandChoiceId: number) {
+    if (playerHandChoiceId === botHandChoiceId) {
       return 2;
     }
 
-    var playerHandEnumKey: any = Hand[Hand[playerHand]];
-    var botHandEnumKey: any = Hand[Hand[botHand]];
-    
-    if (playerHandEnumKey === Hand.Scissors 
-        && botHandEnumKey === Hand.Paper) {
+    if (playerHandChoiceId === HandChoiceEnum.Scissors 
+        && botHandChoiceId === HandChoiceEnum.Paper) {
           return 0;
         }
     
-    else if (playerHandEnumKey === Hand.Paper 
-        && botHandEnumKey === Hand.Rock) {
+    else if (playerHandChoiceId === HandChoiceEnum.Paper 
+        && botHandChoiceId === HandChoiceEnum.Rock) {
           return 0;
         }
     
-    else if (playerHandEnumKey === Hand.Rock 
-        && botHandEnumKey === Hand.Lizard) {
+    else if (playerHandChoiceId === HandChoiceEnum.Rock 
+        && botHandChoiceId === HandChoiceEnum.Lizard) {
           return 0;
         }
 
-    else if (playerHandEnumKey === Hand.Lizard 
-        && botHandEnumKey === Hand.Spock) {
+    else if (playerHandChoiceId === HandChoiceEnum.Lizard 
+        && botHandChoiceId === HandChoiceEnum.Spock) {
           return 0;
         }
 
-    else if (playerHandEnumKey === Hand.Spock 
-        && botHandEnumKey === Hand.Scissors) {
+    else if (playerHandChoiceId === HandChoiceEnum.Spock 
+        && botHandChoiceId === HandChoiceEnum.Scissors) {
           return 0;
         }
     
-    else if (playerHandEnumKey === Hand.Scissors 
-        && botHandEnumKey === Hand.Lizard) {
+    else if (playerHandChoiceId === HandChoiceEnum.Scissors 
+        && botHandChoiceId === HandChoiceEnum.Lizard) {
           return 0;
         }
     
-    else if (playerHandEnumKey === Hand.Lizard 
-        && botHandEnumKey === Hand.Paper) {
+    else if (playerHandChoiceId === HandChoiceEnum.Lizard 
+        && botHandChoiceId === HandChoiceEnum.Paper) {
           return 0;
         }
 
-    else if (playerHandEnumKey === Hand.Paper 
-        && botHandEnumKey === Hand.Spock) {
+    else if (playerHandChoiceId === HandChoiceEnum.Paper 
+        && botHandChoiceId === HandChoiceEnum.Spock) {
           return 0;
         }
     
-    else if (playerHandEnumKey === Hand.Spock 
-        && botHandEnumKey === Hand.Rock) {
+    else if (playerHandChoiceId === HandChoiceEnum.Spock 
+        && botHandChoiceId === HandChoiceEnum.Rock) {
           return 0;
         }
 
-    else if (playerHandEnumKey === Hand.Rock 
-        && botHandEnumKey === Hand.Scissors) {
+    else if (playerHandChoiceId === HandChoiceEnum.Rock 
+        && botHandChoiceId === HandChoiceEnum.Scissors) {
           return 0;
         }
     
